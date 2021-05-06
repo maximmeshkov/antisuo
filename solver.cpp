@@ -128,7 +128,8 @@ void solver::solve()
     {
         lvl=3000+((hTarget-hOP)/(0.001*dtt));
         ky=distCmdr/ (float) dtt;
-        std::cout << "ky=" << distCmdr<<'/'<<dtt<<"=" <<ky<< std::endl;
+        ps=abs(alphaTarget-alphaOH-rtt);
+        shy=ps/(0.01*dtt);
     }
 }
 

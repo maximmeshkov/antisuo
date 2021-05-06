@@ -57,6 +57,9 @@ void MainWindow::recalculate()
     ui->ResultLVL->setText(QString::number(solver.getLVL()));
     ui->ResultKy->setText(QString::number(solver.getKy()));
 
+    ui->ResultPS->setText(QString::number(solver.getPS()));
+    ui->ResultShy->setText(QString::number(solver.getShy()));
+
 }
 
 
