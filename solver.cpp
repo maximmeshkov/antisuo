@@ -63,7 +63,6 @@ float solver::getPS()
 {
     return ps;
 }
-
 int solver::getDTT()
 {
     return dtt;
@@ -71,6 +70,10 @@ int solver::getDTT()
 int solver::getRTT()
 {
     return rtt;
+}
+int solver::getLVL()
+{
+    return lvl;
 }
 
 void solver::solve()
@@ -96,21 +99,12 @@ void solver::solve()
     xTarget = xKNP + dx;
     yTarget = yKNP + dy;
 
-
-    std::cout << "distCmdr=" << distCmdr << std::endl;
-    std::cout << "dx=" << dx << "\t dy=" << dy << std::endl;
     std::cout << "xTarget=" << xTarget << "\t yTarget=" << yTarget << std::endl;
     //---------------------------------------------------------------------------//
     int dxt = xTarget - xOP;
     int dyt = yTarget - yOP;
 
-
-    std::cout << "dxt=" << dxt << "\t dyt=" << dyt << std::endl;
-
     int rumbtt = (int) (std::atan2(abs(dyt),abs(dxt)) * 954.92);
-
-
-    std::cout << "rumbtt=" << rumbtt <<" \t std::atan(dyt/dxt) =" << std::atan2(dyt,dxt)  << std::endl;
 
     if ((dxt >= 0) && (dyt >= 0))
         rtt = rumbtt;
@@ -125,62 +119,17 @@ void solver::solve()
     rtt=rtt-alphaOH;
     dtt =std::sqrt(dxt*dxt + dyt*dyt);
 
-    std::cout << "rtt=" << rtt << "\t atan=" << std::atan2(dyt , dxt) << std::endl;
-    std::cout << "dtt=" << dtt << std::endl<< std::endl;
-}
+   //------------------------------------------------------------------------------//
 
-void solver::solve_degree()
-{
-    int xTarget = 0, yTarget = 0;
-    int dx = 0, dy = 0;
-    if (alphaTarget < 0)
-        alphaTarget += 360;
-    if ((alphaTarget >= 0) && (alphaTarget < 90)) {
-        dx = (int) distCmdr * std::cos((alphaTarget) *3.1416 / 180);
-        dy = (int) distCmdr * std::sin((alphaTarget) *3.1416 / 180);
-    } else if ((alphaTarget >= 90) && (alphaTarget < 180)) {
-        dx = (int) -distCmdr * std::cos((180 - alphaTarget) * 3.1416 / 180);
-        dy = (int) distCmdr * std::sin((180 - alphaTarget) * 3.1416 / 180);
-    } else if ((alphaTarget >= 180) && (alphaTarget < 270)) {
-        dx = (int) -distCmdr * std::cos((alphaTarget - 180) * 3.1416 / 180);
-        dy = (int) -distCmdr * std::sin((alphaTarget - 180) * 3.1416 / 180);
-    } else if ((alphaTarget >= 270) && (alphaTarget < 360)) {
-        dx = (int) distCmdr * std::cos((360 - alphaTarget) * 3.1416 / 180);
-        dy = (int) -distCmdr * std::sin((360 - alphaTarget) * 3.1416 / 180);
-    } else {
+    int hTarget=hKNP+(epsTarget*distCmdr/1000);
+     std::cout << "hTarget=" << hTarget << std::endl;
+
+    if (dtt!=0)
+    {
+        lvl=3000+((hTarget-hOP)/(0.001*dtt));
+        ky=distCmdr/ (float) dtt;
+        std::cout << "ky=" << distCmdr<<'/'<<dtt<<"=" <<ky<< std::endl;
     }
-    xTarget = xKNP + dx;
-    yTarget = yKNP + dy;
-
-
-    std::cout << "distCmdr=" << distCmdr << std::endl;
-    std::cout << "dx=" << dx << "\t dy=" << dy << std::endl;
-    std::cout << "xTarget=" << xTarget << "\t yTarget=" << yTarget << std::endl;
-    //---------------------------------------------------------------------------//
-    int dxt = xTarget - xOP;
-    int dyt = yTarget - yOP;
-
-
-    std::cout << "dxt=" << dxt << "\t dyt=" << dyt << std::endl;
-
-    int rumbtt = (int) (std::atan2(dyt,dxt) * 180 / 3.1416);
-
-
-    std::cout << "rumbtt=" << rumbtt <<" \t std::atan(dyt/dxt) =" << std::atan2(dyt,dxt)  << std::endl;
-
-    if ((dxt >= 0) && (dyt >= 0))
-        rtt = rumbtt;
-    else if ((dxt <= 0) && (dyt >= 0))
-        rtt = 180 - rumbtt;
-    else if ((dxt <= 0) && (dyt <= 0))
-        rtt = rumbtt + 180;
-    else if ((dxt >= 0) && (dyt <= 0))
-        rtt = 360 - rumbtt;
-    else {   }
-
-    dtt = std::sqrt(dxt*dxt + dyt*dyt);
-
-    std::cout << "rtt=" << rtt << "\t atan=" << std::atan2(dyt , dxt) << std::endl;
-    std::cout << "dtt=" << dtt << std::endl<< std::endl;
-
 }
+
+

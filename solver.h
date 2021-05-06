@@ -9,7 +9,7 @@ class solver
     int alphaTarget = 0, distCmdr = 0;
     int epsTarget=0;
 
-    int dtt=0, rtt=0;
+    int dtt=0, rtt=0, lvl=3000;
     float shy=0, ky=0, ps=0;
 public:
     solver();
@@ -29,13 +29,14 @@ public:
 
     int getDTT();
     int getRTT();
+    int getLVL();
 
     float getShy();
     float getKy();
     float getPS();
 
     void solve();
-    void solve_degree();
+
 private:
   //  void solve();
 

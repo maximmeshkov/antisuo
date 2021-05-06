@@ -52,9 +52,11 @@ void MainWindow::recalculate()
 
 
     solver.solve();
-    //solver.solve_degree();
     ui->ResultDTT->setText(QString::number(solver.getDTT()));
     ui->ResultRTT->setText(QString::number(solver.getRTT()));
+    ui->ResultLVL->setText(QString::number(solver.getLVL()));
+    ui->ResultKy->setText(QString::number(solver.getKy()));
+
 }
 
 
