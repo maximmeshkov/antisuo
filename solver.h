@@ -1,7 +1,7 @@
 #ifndef SOLVER_H
 #define SOLVER_H
 
-#include <QMainWindow>
+
 
 class solver
 {
@@ -38,7 +38,7 @@ public:
     void solve();
 
 private:
-  //  void solve();
+
 
 
 };

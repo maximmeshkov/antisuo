@@ -49,8 +49,6 @@ void MainWindow::recalculate()
     solver.setepsTarget(ui->epsTarget->text().toInt());
     solver.sethOP(ui->hOPin->text().toInt());
 
-
-
     solver.solve();
     ui->ResultDTT->setText(QString::number(solver.getDTT()));
     ui->ResultRTT->setText(QString::number(solver.getRTT()));
@@ -59,6 +57,10 @@ void MainWindow::recalculate()
 
     ui->ResultPS->setText(QString::number(solver.getPS()));
     ui->ResultShy->setText(QString::number(solver.getShy()));
+
+
+
+
 
 }
 
