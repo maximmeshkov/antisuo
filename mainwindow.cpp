@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <solver.h>
+#include "solver.h"
+#include "corrector.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -22,6 +23,19 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->hKNPin, &QLineEdit::textChanged, this, &MainWindow::recalculate);
     connect(ui->epsTarget, &QLineEdit::textChanged, this, &MainWindow::recalculate);
     connect(ui->hOPin, &QLineEdit::textChanged, this, &MainWindow::recalculate);
+
+
+    connect(ui->refRange, &QLineEdit::textChanged, this, &MainWindow::recalculate);
+    connect(ui->refRange_2, &QLineEdit::textChanged, this, &MainWindow::recalculate);
+    connect(ui->refRange_2, &QLineEdit::textChanged, this, &MainWindow::recalculate);
+
+    connect(ui->corrAngle, &QLineEdit::textChanged, this, &MainWindow::recalculate);
+    connect(ui->corrAngle_2, &QLineEdit::textChanged, this, &MainWindow::recalculate);
+    connect(ui->corrAngle_3, &QLineEdit::textChanged, this, &MainWindow::recalculate);
+
+    connect(ui->corrDist, &QLineEdit::textChanged, this, &MainWindow::recalculate);
+    connect(ui->corrDist_2, &QLineEdit::textChanged, this, &MainWindow::recalculate);
+    connect(ui->corrDist_3, &QLineEdit::textChanged, this, &MainWindow::recalculate);
 
 
 }
@@ -59,6 +73,32 @@ void MainWindow::recalculate()
     ui->ResultShy->setText(QString::number(solver.getShy()));
 
 
+    corrector corrector;
+    corrector.setrefD1(ui->refRange->text().toInt());
+    corrector.setrefD2(ui->refRange_2->text().toInt());
+    corrector.setrefD3(ui->refRange_3->text().toInt());
+
+    corrector.setdD1(ui->corrDist->text().toInt());
+    corrector.setdD2(ui->corrDist_2->text().toInt());
+    corrector.setdD3(ui->corrDist_3->text().toInt());
+
+
+    corrector.setdd1(ui->corrAngle->text().toInt());
+    corrector.setdd2(ui->corrAngle_2->text().toInt());
+    corrector.setdd3(ui->corrAngle_3->text().toInt());
+
+
+    corrector.setdtt(solver.getDTT());
+    corrector.setrtt(solver.getRTT());
+
+    corrector.calculate();
+
+
+    ui->ResultDD->setText(QString::number(corrector.getResultdD()));
+    ui->ResultDTR->setText(QString::number(corrector.getResultDTR()));
+
+    ui->ResultDR->setText(QString::number(corrector.getResultdd()));
+    ui->ResultRTR->setText(QString::number(corrector.getResultRTR()));
 
 
 

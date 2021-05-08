@@ -5,7 +5,7 @@
 
 class solver
 {
-    int xKNP = 0, xOP = 0, yKNP = 0, yOP = 0, hKNP = 0, hOP = 0, alphaOH = 1;
+    int xKNP = 0, xOP = 0, yKNP = 0, yOP = 0, hKNP = 0, hOP = 0, alphaOH = 0;
     int alphaTarget = 0, distCmdr = 0;
     int epsTarget=0;
 

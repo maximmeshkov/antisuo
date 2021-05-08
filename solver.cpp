@@ -122,7 +122,7 @@ void solver::solve()
    //------------------------------------------------------------------------------//
 
     int hTarget=hKNP+(epsTarget*distCmdr/1000);
-     std::cout << "hTarget=" << hTarget << std::endl;
+    std::cout << "hTarget=" << hTarget << std::endl;
 
     if (dtt!=0)
     {
