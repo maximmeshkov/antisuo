@@ -38,6 +38,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->corrDist_3, &QLineEdit::textChanged, this, &MainWindow::recalculate);
 
 
+     //ui->xKNPin->setInputMethodHints(Qt::ImhDigitsOnly);
+
 }
 
 MainWindow::~MainWindow()
@@ -104,5 +106,8 @@ void MainWindow::recalculate()
 
 }
 
+void MainWindow::showkeyboard()
+{
 
+}
 

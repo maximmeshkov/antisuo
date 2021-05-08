@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>720</width>
-    <height>480</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,7 +19,7 @@
   <property name="minimumSize">
    <size>
     <width>720</width>
-    <height>480</height>
+    <height>400</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -36,111 +36,22 @@
   <property name="tabletTracking">
    <bool>false</bool>
   </property>
+  <property name="focusPolicy">
+   <enum>Qt::ClickFocus</enum>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::PreventContextMenu</enum>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="inputMethodHints">
+   <set>Qt::ImhFormattedNumbersOnly</set>
   </property>
   <property name="tabShape">
    <enum>QTabWidget::Triangular</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>10</y>
-      <width>311</width>
-      <height>111</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLabel" name="OPtext">
-         <property name="text">
-          <string>ОП: </string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="xOPtext">
-         <property name="text">
-          <string>X:  </string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="xOPin">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="yOPtext">
-         <property name="text">
-          <string>Y:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="yOPin"/>
-       </item>
-       <item>
-        <widget class="QLabel" name="hOPtext">
-         <property name="text">
-          <string>h:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="hOPin"/>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="QLabel" name="xOPtext_3">
-         <property name="text">
-          <string>КНП:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="xKNPtext">
-         <property name="text">
-          <string>X:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="xKNPin"/>
-       </item>
-       <item>
-        <widget class="QLabel" name="yKNPtext">
-         <property name="text">
-          <string>Y:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="yKNPin"/>
-       </item>
-       <item>
-        <widget class="QLabel" name="hKNPtext">
-         <property name="text">
-          <string>h:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="hKNPin"/>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </widget>
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
@@ -214,19 +125,12 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>119</y>
+      <y>160</y>
       <width>301</width>
       <height>71</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
-     <item row="1" column="0">
-      <widget class="QLabel" name="alphaTargetText">
-       <property name="text">
-        <string>αц</string>
-       </property>
-      </widget>
-     </item>
      <item row="0" column="1">
       <widget class="QLineEdit" name="alphaOH"/>
      </item>
@@ -252,6 +156,13 @@
      </item>
      <item row="1" column="5">
       <widget class="QLineEdit" name="epsTarget"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="alphaTargetText">
+       <property name="text">
+        <string>αц</string>
+       </property>
+      </widget>
      </item>
      <item row="0" column="0">
       <widget class="QLabel" name="alphaOHtext">
@@ -279,9 +190,9 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>260</y>
+      <y>230</y>
       <width>671</width>
-      <height>171</height>
+      <height>131</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
@@ -527,12 +438,122 @@
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="gridLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>44</x>
+      <y>22</y>
+      <width>371</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="1" column="0">
+      <widget class="QLabel" name="xOPtext_3">
+       <property name="text">
+        <string>КНП:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="OPtext">
+       <property name="text">
+        <string>ОП: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="xKNPtext">
+         <property name="text">
+          <string>X:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="xKNPin"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="yKNPtext">
+         <property name="text">
+          <string>Y:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="yKNPin"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="hKNPtext">
+         <property name="text">
+          <string>h:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="hKNPin"/>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="xOPtext">
+         <property name="text">
+          <string>X:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="xOPin">
+         <property name="tabletTracking">
+          <bool>false</bool>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::WheelFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::ActionsContextMenu</enum>
+         </property>
+         <property name="inputMethodHints">
+          <set>Qt::ImhFormattedNumbersOnly</set>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="yOPtext">
+         <property name="text">
+          <string>Y:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="yOPin"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="hOPtext">
+         <property name="text">
+          <string>h:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="hOPin"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
    <widget class="QLabel" name="title">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>50</x>
       <y>10</y>
-      <width>131</width>
+      <width>171</width>
       <height>13</height>
      </rect>
     </property>
