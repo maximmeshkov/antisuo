@@ -18,8 +18,8 @@ public:
 
 private Q_SLOTS:
     void recalculate();
-    void showkeyboard();
-
+    //void showkeyboard();
+  //  bool eventFilter(QObject *object, QEvent *event);
 private:
     Ui::MainWindow *ui;
 };

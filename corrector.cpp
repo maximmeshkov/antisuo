@@ -53,11 +53,11 @@ void corrector::setdd3(int dd)
 
 int corrector::getResultdD()
 {
-    return (int) resultdD;
+    return qRound(resultdD);
 }
 int corrector::getResultdd()
 {
-    return (int) resultdd;
+    return qRound(resultdd);
 }
 int corrector::getResultDTR()
 {

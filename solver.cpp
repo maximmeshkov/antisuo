@@ -104,7 +104,7 @@ void solver::solve()
     int dxt = xTarget - xOP;
     int dyt = yTarget - yOP;
 
-    int rumbtt = (int) (std::atan2(abs(dyt),abs(dxt)) * 954.92);
+    int rumbtt = round(std::atan2(abs(dyt),abs(dxt)) * 954.92); //int rumbtt = (int) (std::atan2(abs(dyt),abs(dxt)) * 954.92);
 
     if ((dxt >= 0) && (dyt >= 0))
         rtt = rumbtt;
@@ -127,9 +127,9 @@ void solver::solve()
     if (dtt!=0)
     {
         lvl=3000+((hTarget-hOP)/(0.001*dtt));
-        ky=distCmdr/ (float) dtt;
+        ky=round(distCmdr*100/ (float) dtt)/100; //round(x*100)/100 для выводя сотых долей
         ps=abs(alphaTarget-alphaOH-rtt);
-        shy=ps/(0.01*dtt);
+        shy=round(ps*100/(0.01*dtt))/100;
     }
 }
 

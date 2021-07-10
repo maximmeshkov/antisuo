@@ -45,6 +45,12 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="accessibleName">
+   <string notr="true"/>
+  </property>
+  <property name="accessibleDescription">
+   <string notr="true"/>
+  </property>
   <property name="inputMethodHints">
    <set>Qt::ImhFormattedNumbersOnly</set>
   </property>
@@ -177,9 +183,9 @@
     <property name="geometry">
      <rect>
       <x>420</x>
-      <y>-10</y>
-      <width>379</width>
-      <height>45</height>
+      <y>0</y>
+      <width>201</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
@@ -192,7 +198,7 @@
       <x>40</x>
       <y>230</y>
       <width>671</width>
-      <height>131</height>
+      <height>126</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_3">
@@ -516,6 +522,12 @@
          <property name="contextMenuPolicy">
           <enum>Qt::ActionsContextMenu</enum>
          </property>
+         <property name="accessibleName">
+          <string notr="true"/>
+         </property>
+         <property name="accessibleDescription">
+          <string notr="true"/>
+         </property>
          <property name="inputMethodHints">
           <set>Qt::ImhFormattedNumbersOnly</set>
          </property>
@@ -565,6 +577,32 @@
     </property>
     <property name="text">
      <string>Начальные данные</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>350</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>by Meshkov</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>350</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>pre-alpha</string>
     </property>
    </widget>
   </widget>
