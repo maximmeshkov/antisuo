@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>720</width>
+    <width>478</width>
     <height>400</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>720</width>
+    <width>400</width>
     <height>400</height>
    </size>
   </property>
@@ -61,10 +61,10 @@
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>20</y>
-      <width>286</width>
-      <height>161</height>
+      <x>260</x>
+      <y>30</y>
+      <width>211</width>
+      <height>131</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -72,13 +72,25 @@
       <number>0</number>
      </property>
      <item row="0" column="4">
-      <widget class="QLineEdit" name="refRange_3"/>
+      <widget class="QLineEdit" name="refRange_3">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
      </item>
      <item row="0" column="2">
-      <widget class="QLineEdit" name="refRange"/>
+      <widget class="QLineEdit" name="refRange">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
      </item>
      <item row="2" column="3">
-      <widget class="QLineEdit" name="corrAngle_2"/>
+      <widget class="QLineEdit" name="corrAngle_2">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
      </item>
      <item row="2" column="1">
       <widget class="QLabel" name="corrText3">
@@ -91,20 +103,35 @@
       </widget>
      </item>
      <item row="1" column="3">
-      <widget class="QLineEdit" name="corrDist_2"/>
+      <widget class="QLineEdit" name="corrDist_2">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
      </item>
      <item row="2" column="2">
-      <widget class="QLineEdit" name="corrAngle"/>
+      <widget class="QLineEdit" name="corrAngle">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
      </item>
      <item row="0" column="1">
       <widget class="QLabel" name="corrText1">
        <property name="text">
-        <string>Дальность, км</string>
+        <string>Д,км</string>
        </property>
       </widget>
      </item>
      <item row="1" column="2">
-      <widget class="QLineEdit" name="corrDist"/>
+      <widget class="QLineEdit" name="corrDist">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </item>
      <item row="1" column="1">
       <widget class="QLabel" name="corrText2">
@@ -117,31 +144,51 @@
       </widget>
      </item>
      <item row="1" column="4">
-      <widget class="QLineEdit" name="corrDist_3"/>
+      <widget class="QLineEdit" name="corrDist_3">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
      </item>
      <item row="2" column="4">
-      <widget class="QLineEdit" name="corrAngle_3"/>
+      <widget class="QLineEdit" name="corrAngle_3">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
      </item>
      <item row="0" column="3">
-      <widget class="QLineEdit" name="refRange_2"/>
+      <widget class="QLineEdit" name="refRange_2">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
    <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>10</x>
       <y>160</y>
-      <width>301</width>
+      <width>261</width>
       <height>71</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
      <item row="0" column="1">
-      <widget class="QLineEdit" name="alphaOH"/>
+      <widget class="QLineEdit" name="alphaOH">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="alphaTarget"/>
+      <widget class="QLineEdit" name="alphaTarget">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
      </item>
      <item row="1" column="2">
       <widget class="QLabel" name="distCmdrText">
@@ -151,7 +198,11 @@
       </widget>
      </item>
      <item row="1" column="3">
-      <widget class="QLineEdit" name="distCmdr"/>
+      <widget class="QLineEdit" name="distCmdr">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
      </item>
      <item row="1" column="4">
       <widget class="QLabel" name="epsTargetText">
@@ -161,7 +212,11 @@
       </widget>
      </item>
      <item row="1" column="5">
-      <widget class="QLineEdit" name="epsTarget"/>
+      <widget class="QLineEdit" name="epsTarget">
+       <property name="inputMethodHints">
+        <set>Qt::ImhDigitsOnly</set>
+       </property>
+      </widget>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="alphaTargetText">
@@ -182,7 +237,7 @@
    <widget class="QLabel" name="title_2">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>310</x>
       <y>0</y>
       <width>201</width>
       <height>20</height>
@@ -195,9 +250,9 @@
    <widget class="QWidget" name="gridLayoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>10</x>
       <y>230</y>
-      <width>671</width>
+      <width>461</width>
       <height>126</height>
      </rect>
     </property>
@@ -418,7 +473,7 @@
    <widget class="QWidget" name="verticalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>604</x>
+      <x>370</x>
       <y>180</y>
       <width>101</width>
       <height>50</height>
@@ -447,9 +502,9 @@
    <widget class="QWidget" name="gridLayoutWidget_4">
     <property name="geometry">
      <rect>
-      <x>44</x>
-      <y>22</y>
-      <width>371</width>
+      <x>10</x>
+      <y>30</y>
+      <width>241</width>
       <height>131</height>
      </rect>
     </property>
@@ -478,7 +533,14 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="xKNPin"/>
+        <widget class="QLineEdit" name="xKNPin">
+         <property name="inputMethodHints">
+          <set>Qt::ImhDigitsOnly</set>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="yKNPtext">
@@ -488,7 +550,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="yKNPin"/>
+        <widget class="QLineEdit" name="yKNPin">
+         <property name="inputMethodHints">
+          <set>Qt::ImhDigitsOnly</set>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="hKNPtext">
@@ -498,7 +564,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="hKNPin"/>
+        <widget class="QLineEdit" name="hKNPin">
+         <property name="inputMethodHints">
+          <set>Qt::ImhDigitsOnly</set>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -529,7 +599,7 @@
           <string notr="true"/>
          </property>
          <property name="inputMethodHints">
-          <set>Qt::ImhFormattedNumbersOnly</set>
+          <set>Qt::ImhDigitsOnly</set>
          </property>
          <property name="text">
           <string/>
@@ -544,7 +614,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="yOPin"/>
+        <widget class="QLineEdit" name="yOPin">
+         <property name="inputMethodHints">
+          <set>Qt::ImhDigitsOnly</set>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="hOPtext">
@@ -554,7 +628,11 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="hOPin"/>
+        <widget class="QLineEdit" name="hOPin">
+         <property name="inputMethodHints">
+          <set>Qt::ImhDigitsOnly</set>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -582,8 +660,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>350</y>
+      <x>400</x>
+      <y>360</y>
       <width>71</width>
       <height>20</height>
      </rect>
@@ -595,14 +673,20 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>350</y>
+      <x>310</x>
+      <y>360</y>
       <width>71</width>
       <height>20</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="text">
-     <string>pre-alpha</string>
+     <string>alpha</string>
     </property>
    </widget>
   </widget>
@@ -611,7 +695,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>720</width>
+     <width>478</width>
      <height>24</height>
     </rect>
    </property>

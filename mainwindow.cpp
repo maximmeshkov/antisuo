@@ -2,7 +2,6 @@
 #include "ui_mainwindow.h"
 #include "solver.h"
 #include "corrector.h"
-//#include <QAccessible>
 
 
 
@@ -12,10 +11,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //ui->yKNPin->setAttribute(Qt::WA_InputMethodEnabled, true);
-    QInputMethod *keyboard = QGuiApplication::inputMethod();
-    keyboard->show();
-    keyboard->setVisible(true);
 
     //--------------------calculation--------------------------------------------------//
 
@@ -120,29 +115,3 @@ void MainWindow::recalculate()
 
 
 }
-/*
-void MainWindow::showkeyboard()
-{
-    keyboard->show();
-}
-
-
-bool MainWindow::eventFilter(QObject *object, QEvent *event)
-{
-    if (event->type() ==QEvent::FocusIn)
-    {
-        keyboard->show();
-    }
-    if (event->type() ==QEvent::QEvent::Enter)
-    {
-        keyboard->show();
-    }
-
-
-    if (event->type() ==QEvent::MouseButtonPress)
-       {
-           keyboard->show();
-       }
-    return false;
-}
-*/

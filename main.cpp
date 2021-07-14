@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
    // QInputMethod *keyboard = QGuiApplication::inputMethod();
     //keyboard->show();
-    a.setAutoSipEnabled(true);
+   // a.setAutoSipEnabled(true);
 
     MainWindow w;
 
